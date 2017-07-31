@@ -1,0 +1,70 @@
+
+#centerMap{
+	width: 50%;
+    margin: 0 auto;
+}
+
+#fHead{
+	font-size: 30px;
+}
+#fMain{
+	font-size: 20px;
+	text-align: center;
+}
+
+header{
+	text-align: center;
+}
+
+#locationMain, #fList{
+	text-align: center;
+}
+#middleMap{
+	padding: 30px;
+}
+
+td, th {
+	text-align: left; 
+	padding:5px; 
+	background: white; 
+	width: 25%;
+	font-size: 1em; 
+	font-weight: bold; 
+}
+
+#viewSubmission{
+	padding: 20px;
+	text-size: 40px;
+}
+
+.ui-icon-about:after {
+			background-image: url("https://pbs.twimg.com/profile_images/499605907936788481/m29UntRV.png");
+			background-size: 25px 25px;
+}
+.ui-icon-sheridan:after {
+			background-image: url("http://sheridansun.sheridanc.on.ca/wp-content/uploads/2013/09/Sheridan-S.jpg");
+			background-size: 25px 25px;
+}
+.ui-icon-ago:after {
+			background-image: url("http://static.wixstatic.com/media/52e73e_2e9b6bf172e44c668daf2f8628a15eb1~mv1.jpg");
+			background-size: 25px 25px;
+}
+.ui-icon-astronomy:after {
+			background-image: url("https://cdn4.iconfinder.com/data/icons/education-training/33/telescope-512.png");
+			background-size: 25px 25px;
+}
+.ui-icon-wind:after {
+			background-image: url("https://www.energyinst.org/_uploads/imgpool/offshore-wind4.png");
+			background-size: 25px 25px;
+}
+.ui-icon-atmosphere:after {
+			background-image: url("http://images.tutorvista.com/cms/images/149/layers-of-the-atmosphere.PNG");
+			background-size: 25px 25px;
+}
+.ui-icon-form:after {
+			background-image: url("http://mypm.com.au/wp-content/uploads/2015/04/fillout_icon.png");
+			background-size: 25px 25px;
+}
+
+
+		
