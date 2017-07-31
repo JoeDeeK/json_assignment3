@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- 	Assignment 3
+		Student Name: Jody Kirton
+		Student Number: 991355155 
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Assignment 3</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="_css/jquery.mobile.css">
+		<link rel="stylesheet" href="_css/ThemeA.css" />
+		<link rel="stylesheet" href="_css/mystyles.css">	
+		<script src="_js/jquery.js"></script>
+		<script src="_js/jquery.mobile.js"></script>
+		<script src="_js/myscript.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"></script> 
+	</head>
+	<body>
+		<div data-role="page" id="mainPage" data-theme="a">
+			<header data-role="header" id="header"></header>
+
+			<section class="ui-content" role="main">
+				<div id="main" data-role="collapsible-set">	
+					<div class='ui-grid-b'>
+						<div class='ui-block-a' id='locationMain'>
+						</div> <!-- End of block a -->	
+						<div class='ui-block-b' id='middleMap'>	
+							<section data-role='collapsible'>
+								<br>
+								<h1 class='ui-btn' id='mapBtn'>View Map</h1>								
+								<div data-role='collapsible-set' id="centerMap">
+									<div id='map_canvas' style='height:300px; width:300px;'></div>
+								</div>								
+							</section>
+						</div> <!-- End of block b -->
+						<div class='ui-block-c' id="fList">
+						</div> <!-- End of block c -->
+					</div> <!-- End of grid b -->
+				</div> <!-- End of collapsible set -->
+			</section>
+				
+			<footer data-role="footer">		
+				<div data-role="navbar" id="navhome" class="ui-navbar">
+					<ul>  
+					  <li><a href="#aboutPopup" class="ui-btn ui-icon-about ui-btn-icon-left">About</a></li> <!-- popup panel : info from JSON file I build (format/info labeling)-->
+					  <li><a href="http://www.sheridancollege.ca" class="ui-btn ui-icon-sheridan ui-btn-icon-left">Sheridan</a></li>
+					  <li><a href="http://www.ago.net" class="ui-btn ui-icon-ago ui-btn-icon-left">AGO</a></li>
+					</ul>
+				</div>
+			</footer>
+				
+			<!-- Start of windPanel -->
+			<div id="windPanel" data-role="panel">
+				<h3 style="text-align:center;">Wind</h3>
+				<div id="wind"></div>
+			</div> <!-- end of windPanel -->
+				
+			<!-- Start of atmospherePanel -->
+			<div id="atmospherePanel" data-role="panel">
+				<h3 style="text-align:center;">Atmosphere</h3>
+				<div id="atmosphere"></div>
+			</div> <!-- end of astmospherePanel -->
+				
+			<!-- Start of astronomyPanel -->
+			<div id="astronomyPanel" data-role="panel">
+				<h3 style="text-align:center;">Astronomy</h3>
+				<div id="astronomy"></div>
+			</div> <!-- end of astronomyPanel -->	
+		</div> <!-- End of mainPage div -->
+			
+		<!-- Start of About popup page-->
+		<div data-role="page" id="aboutPopup">
+			<header data-role="header" data-theme="b">
+				<h1 id="headAbout">About</h1>
+			</header>
+			<div class="ui-content" role="main" data-theme="b">	
+				<p id="aboutInfo"></p>		
+				<p><a data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-top">Back to page</a></p>	
+			</div>
+		</div> <!-- end of popup page -->
+			
+		<!-- Start of Forecast popup page-->
+		<div data-role="page" id="forecastPopup">
+			<header data-role="header" data-theme="b" id="fHead">
+				<h1>Forecast</h1>
+				<h2 id="date"></h2>
+			</header>
+			<div class="ui-content" role="main" data-theme="b" id="fMain">	
+				<p id="code"></p>		
+				<p id="day"></p>
+				<p id="high"></p>
+				<p id="low"></p>
+				<p id="text"></p>
+				<p><a data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-top">Back to page</a></p>
+			</div>
+		</div> <!-- end of popup page -->		
+		
+		<!-- Start of form page -->
+		<div data-role="page" id="formPage">
+			<header data-role="header" data-theme="b" id="formHeader">
+				<h1>Form</h1>
+			</header>
+			<div class="ui-content" role="main" data-theme="b" id="formMain">				
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<br><em>Email:</em><br>
+						<input type="email" name="email" id="emailText" placeholder="Email"><br>
+						
+						<fieldset data-role="controlgroup"data-type="horizontal">
+						<legend>Select Type:</legend>
+						<input type="radio" name="selectedType" id="technical" value="Technical" checked="checked">
+						<label for="technical">Technical</label>
+						<input type="radio" name="selectedType" id="general" value="General">
+						<label for="general">General</label>
+						<input type="radio" name="selectedType" id="comment" value="Comment">
+						<label for="comment">Comment</label>
+						</fieldset><br>		
+
+						<em>Type your Question or Comment here:</em><br>
+						<input type="text" name="text" id="textBox" placeholder="Question/Comment"><br>
+						
+						<h1 class='ui-btn' id='formSubmit'>Submit</h1><br>
+						<h1 class='ui-btn ui-icon-arrow-r ui-btn-icon-left' id='lastSubmit'>Retrieve Last Submission</h1><br>
+					</div> <!-- end of block-a -->
+					<div class="ui-block-b"><p id="viewSubmission"></p>
+					</div> <!-- end of block-b -->
+				</div> <!-- end of grid-a -->		
+				<p><a data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-top">Back to page</a></p>
+			</div> <!-- end of form main content -->
+		</div> <!-- end of form page -->
+		
+	</body>
+</html>
